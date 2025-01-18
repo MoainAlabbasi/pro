@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نظام إدارة محلات الإلكترونيات</title>
+    <link rel="stylesheet" href="si.css">
+</head>
+<body>
+    <header class="header">
+        <h1>مرحبًا بكم في نظام إدارة محلات الإلكترونيات</h1>
+        <p>نحن هنا لنساعدكم في إدارة مخازنكم ومبيعاتكم بسهولة وكفاءة.</p>
+    </header>
+
+    <section class="animation">
+        <div class="welcome-animation">أهلاً بكم في نظامنا المتميز!</div>
+    </section>
+
+    <section class="stations">
+        <h2>المحطات</h2>
+        <p>تعرف على أهم المحطات في نظام إدارة محلات الإلكترونيات:</p>
+        <ul>
+            <li>إدارة المخزون</li>
+            <li>إدارة المبيعات</li>
+            <li>إدارة العملاء</li>
+            <li>إدارة الموردين</li>
+            <li>توليد التقارير</li>
+        </ul>
+    </section>
+
+    <section class="branches">
+        <h2>الفروع</h2>
+        <p>تعرف على فروعنا المتاحة حول العالم:</p>
+        <ul>
+            <li>فرع الرياض</li>
+            <li>فرع دبي</li>
+            <li>فرع القاهرة</li>
+            <li>فرع الكويت</li>
+        </ul>
+    </section>
+
+    <section class="contact">
+        <h2>تواصل معنا</h2>
+        <form id="contactForm">
+            <label for="name">الاسم:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="request">الطلب:</label>
+            <input type="text" id="request" name="request" required>
+            <button type="submit">إرسال</button>
+        </form>
+    </section>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+    
+            const name = document.getElementById('name').value;
+            const request = document.getElementById('request').value;
+    
+            const whatsappMessage = `مرحبا، اسمي ${name} وأود طلب ${request}`;
+            const whatsappURL = `https://wa.me/+967770941666?text=${encodeURIComponent(whatsappMessage)}`;
+    
+            window.open(whatsappURL, '_blank');
+        });
+    </script>
+</body>
+</html>
